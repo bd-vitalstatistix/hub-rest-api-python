@@ -115,8 +115,6 @@ For Claude Code, add to your MCP configuration:
 - `get_project_vulnerabilities` - Get security vulnerabilities
 - `list_project_components` - List project components
 
-See [MCP_INTEGRATION.md](MCP_INTEGRATION.md) for detailed documentation.
-
 # Version History
 
 Including a version history on a go-forward basis. 

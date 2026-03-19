@@ -275,35 +275,29 @@ class BlackDuckMCPServer:
                 
                 if not version:
                     return []
-                
+
                 # Get vulnerabilities
-                try:
-                    vulnerabilities = self.client.get_resource('vulnerable-components', version)
-                    result = []
-                    
-                    for i, vuln in enumerate(vulnerabilities):
-                        if limit and i >= limit:
-                            break
-                            
-                        result.append({
-                            'componentName': vuln.get('componentName'),
-                            'componentVersionName': vuln.get('componentVersionName'),
-                            'vulnerabilityName': vuln.get('vulnerabilityName'),
-                            'severity': vuln.get('severity'),
-                            'baseScore': vuln.get('baseScore'),
-                            'overallScore': vuln.get('overallScore'),
-                            'remediationStatus': vuln.get('remediationStatus'),
-                            'description': vuln.get('description', ''),
-                            'publishedDate': vuln.get('publishedDate'),
-                            'updatedDate': vuln.get('updatedDate')
-                        })
-                    
-                    return result
-                    
-                except Exception:
-                    # Fallback: try to get components instead
-                    components = self.client.get_resource('components', version)
-                    return [{'info': 'Use list_project_components for component information'}]
+                vulnerabilities = self.client.get_resource('vulnerable-components', version)
+                result = []
+
+                for i, vuln in enumerate(vulnerabilities):
+                    if limit and i >= limit:
+                        break
+
+                    result.append({
+                        'componentName': vuln.get('componentName'),
+                        'componentVersionName': vuln.get('componentVersionName'),
+                        'vulnerabilityName': vuln.get('vulnerabilityName'),
+                        'severity': vuln.get('severity'),
+                        'baseScore': vuln.get('baseScore'),
+                        'overallScore': vuln.get('overallScore'),
+                        'remediationStatus': vuln.get('remediationStatus'),
+                        'description': vuln.get('description', ''),
+                        'publishedDate': vuln.get('publishedDate'),
+                        'updatedDate': vuln.get('updatedDate')
+                    })
+
+                return result
                 
             except Exception as e:
                 logger.error(f"Error getting vulnerabilities: {e}")
