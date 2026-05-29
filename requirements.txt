@@ -1,24 +1,44 @@
-# For the library itself
-requests==2.32.4
-python-dateutil==2.9.0.post0
+requests==2.32.4 \
+    --hash=sha256:27babd3cda2a6d50b30443204ee89830707d396671944c998b5975b031ac2b2c \
+    --hash=sha256:27d0316682c8a29834d3264820024b62a36942083d52caf2f14c0591336d3422 \
+    --hash=sha256:acc14812958ea21ca50b8bab45099264b3d7feba361acf40ddafd78832b05b98
+python-dateutil==2.9.0.post0 \
+    --hash=sha256:37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3 \
+    --hash=sha256:a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427
+terminaltables==3.1.10 \
+    --hash=sha256:ba6eca5cb5ba02bba4c9f4f985af80c54ec3dccf94cfcd190154386255e47543 \
+    --hash=sha256:e4fdc4179c9e4aab5f674d80f09d76fa436b96fdc698a8505e0a36bf0804a874
+timestring==1.6.4 \
+    --hash=sha256:5c80d8cc555fd31d4d743acb4f028c9ddea294b247cdb407afb7ca050d5c4216 \
+    --hash=sha256:b7d1a2060a5f2e34d0c93b1042690074afcea66638fa2cf4dcad2d1bec4deacc
+pytest==9.0.3 \
+    --hash=sha256:2c5efc453d45394fdd706ade797c0a81091eccd1d6e4bccfcd476e2b8e0ab5d9 \
+    --hash=sha256:b7e6b08772077d35e611ef43c30d186001e5b84c36210b4ff651acfb90f07408 \
+    --hash=sha256:b86ada508af81d19edeb213c681b1d48246c1a91d304c6c81a427674c17eb91c
+pytest-html==4.2.0 \
+    --hash=sha256:4dd34e9a332e96ba7fb140b68632258bec573d2c43166aa671a94986f72bbf7b \
+    --hash=sha256:b6a88cba507500d8709959201e2e757d3941e859fd17cfd4ed87b16fc0c67912 \
+    --hash=sha256:ff5caf3e17a974008e5816edda61168e6c3da442b078a44f8744865862a85636
+requests-mock==1.12.1 \
+    --hash=sha256:3e8db63dff19719391b8c7c678d9e973e582361eeab0b3f80fa9228add556ca6 \
+    --hash=sha256:b1e37054004cdd5e56c84454cc7df12b25f90f382159087f4b6915aaeef39563 \
+    --hash=sha256:e9e12e333b525156e82a3c852f22016b9158220d2f47454de9cae8a77d371401
+pytest-datadir==1.8.0 \
+    --hash=sha256:5c677bc097d907ac71ca418109adc3abe34cf0bddfe6cf78aecfbabd96a15cf0 \
+    --hash=sha256:7a15faed76cebe87cc91941dd1920a9a38eba56a09c11e9ddf1434d28a0f78eb
+setuptools==82.0.1 \
+    --hash=sha256:7d872682c5d01cfde07da7bccc7b65469d3dca203318515ada1de5eda35efbf9 \
+    --hash=sha256:a59e362652f08dcd477c78bb6e7bd9d80a7995bc73ce773050228a348ce2e5bb \
+    --hash=sha256:f2f48a947374136a39e9f349cf28f1900765657b892322e7ead81d0f466db134
+wheel==0.47.0 \
+    --hash=sha256:212281cab4dff978f6cedd499cd893e1f620791ca6ff7107cf270781e587eced \
+    --hash=sha256:66c570b5f1e7276af684b2d1f11070dd332e0d2b78d8f649757d377cd0b211b0 \
+    --hash=sha256:cc72bd1009ba0cf63922e28f94d9d83b920aa2bb28f798a31d0691b02fa3c9b3
 
-# for examples printing tables to the terminal
-terminaltables
-timestring
-
-# for unit testing
-pytest          # see https://docs.pytest.org/en/stable/index.html
-pytest-html     # see https://pytest-html.readthedocs.io/en/latest/index.html
-requests-mock   # see https://requests-mock.readthedocs.io/en/latest/
-pytest-datadir  # see http://github.com/gabrielcnr/pytest-datadir
-
-# For package building and distribution (e.g. to PyPi)
-setuptools
-wheel
-twine
-
-#For some reporting libraries
-#pandas
-
-# For easy date/time operations
-arrow
+twine==6.2.0 \
+    --hash=sha256:3da303f52d63484e824bfb792df1a2c92e849c6d5e1feffc7fb81c71def4e924 \
+    --hash=sha256:418ebf08ccda9a8caaebe414433b0ba5e25eb5e4a927667122fbe8f829f985d8 \
+    --hash=sha256:e5ed0d2fd70c9959770dce51c8f39c8945c574e18173a7b81802dab51b4b75cf
+arrow==1.4.0 \
+    --hash=sha256:749f0769958ebdc79c173ff0b0670d59051a535fa26e8eba02953dc19eb43205 \
+    --hash=sha256:ed0cc050e98001b8779e84d461b0098c4ac597e88704a655582b21d116e526d7
